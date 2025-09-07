@@ -1,0 +1,12 @@
+# Simple CI placeholder
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Lint/Smoke Test
+        run: echo 'Add your linter/test here'

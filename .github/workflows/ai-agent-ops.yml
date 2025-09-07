@@ -1,0 +1,13 @@
+# Placeholder for future AI agent GitHub automation
+name: AI Agent Ops
+
+on:
+  issues:
+    types: [opened]
+    
+jobs:
+  ai_action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Placeholder for AI PM Agent
+        run: echo 'AI agent will auto-triage or scaffold tasks here soon'
