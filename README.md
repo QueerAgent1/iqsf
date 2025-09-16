@@ -1,17 +1,60 @@
-# IQSF — International Queer Safety Foundation
+# IQSF Luxe Editorial - Global Queer Safety Index
 
-**Mission:** To deliver the world’s most trustworthy, explainable, and intersectional platform for queer safety, powered by AI and human insight.
+This project is a full-stack web application designed to track, display, and analyze LGBTQ+ safety data from around the world. It features a Vue.js frontend, a Python FastAPI backend, and a Supabase PostgreSQL database.
 
-**Launch Stack:**
-- AI “teem” for Ops, Code, Legal, Comms, and Research
-- Multi-entity nonprofit + PBC + digital/EU branches
-- Public dashboards, research portal, digital humans, debate-first LLM workflows
-- Open data and in-house LLM lab
+## Project Structure
 
-**Quick Start:**
-1. Clone repository & review [AI_TEAM.md](docs/AI_TEAM.md)
-2. Run `scripts/project_manager_ai.py`
-3. Review [ROADMAP.md](docs/ROADMAP.md) and follow `ONBOARDING.md`
-4. Contribute via PR — AI and humans both welcome!
+- **Frontend:** (Root directory) A Vite-powered Vue 3 application.
+- **Backend:** (`/oracle-chamber`) A FastAPI server that connects to the database.
 
-See [ENTITY_STRUCTURE.md](docs/ENTITY_STRUCTURE.md) and [legal/] for compliance and IP mapping.
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm
+- Python 3.8+ and pip
+- A Supabase account and project
+
+### 1. Backend Setup
+
+1.  **Navigate to the backend directory:**
+    ```bash
+    cd oracle-chamber
+    ```
+
+2.  **Create a virtual environment and install dependencies:**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    pip install -r requirements.txt
+    ```
+
+3.  **Configure Environment Variables:**
+    Create a file named `.env` inside the `oracle-chamber` directory by copying the example:
+    ```bash
+    cp .env.example .env
+    ```
+    Now, edit the `.env` file and add your actual Supabase credentials.
+
+4.  **Run the backend server:**
+    ```bash
+    uvicorn main:app --reload
+    ```
+    The API will be running at `http://127.0.0.1:8000`.
+
+### 2. Frontend Setup
+
+1.  **Navigate to the project root directory and install dependencies:**
+    ```bash
+    npm install
+    ```
+
+2.  **Run the frontend development server:**
+    ```bash
+    npm run dev
+    ```
+    The application will be available at `http://localhost:5173`. The `vite.config.js` is already configured to proxy API requests to the backend.
+
+---
